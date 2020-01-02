@@ -1,0 +1,21 @@
+# Main configuration flags : https://www.pomerium.io/docs/reference/reference/
+
+pomerium_debug: true
+cookie_secret: YVFTMIfW8yBJw+a6sYwdW8rHbU+IAAV/SUkCTg9Jtpo=
+shared_secret: 80ldlrU2d7w+wVpKNfevk6fmb8otEx6CqOfshj2LwhQ=
+
+idp_provider: "google"
+idp_client_id: ""
+idp_client_secret: "-"
+idp_service_account: ""
+
+insecure_server: true
+forward_auth_url: https://fwdauth.x.y.z
+authenticate_service_url: https://authenticate.x.y.z
+
+policy:
+  - from: https://httpbin.x.y.z
+    to: http://httpbin.localhost
+    allowed_domains:
+      - pomerium.io
+      - gmail.com

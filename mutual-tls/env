@@ -1,0 +1,9 @@
+#!/bin/bash
+export TLS_CERT="$(base64 -i out/web-app.crt)"
+export TLS_KEY="$(base64 -i out/web-app.key)"
+export CLIENT_CA="$(base64 -i out/good-ca.crt)"
+
+# Pomerium
+export CERTIFICATE="$(base64 -i out/web-app.crt)"
+export CERTIFICATE_KEY="$(base64 -i out/web-app.crt)"
+export COOKIE_SECRET="$(head -c32 /dev/urandom | base64)"
